@@ -43,6 +43,11 @@
     --error-button: #e31a1a;
     --done-button: #01b574;
     --pending-button: #ffb547;
+    --border-color: #e0e5f2;
+    --primary-color: #707eae;
+    --border-color: #ffffff33;
+    --card-title: #1b2559;
+    --eid-button-color:#11047A;
   }
 
   .dark {

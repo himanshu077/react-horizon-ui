@@ -12,7 +12,7 @@ const KanbanCards = ({ title, description, buttonClass, buttonTitle ,imgSrc,imgA
                 <h4 className="Poppins700 !text-[18px] !text-[--logo-color] !leading-[28px]">{title}</h4>
                 <img src={Edit} alt="edit" />
             </div>
-            <img src={imgSrc} alt={imgAlt}/>
+            <img src={imgSrc} alt={imgAlt} className="!rounded-[20px] !py-2"/>
             <p className="!px-1 !py-3 Poppins400 !text-base !text-[--tab-color]">{description}</p>
             <div className="!flex !justify-between ">
                 <img />

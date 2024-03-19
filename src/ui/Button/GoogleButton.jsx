@@ -1,0 +1,16 @@
+import React from "react";
+import GoogleIcon from "@/assets/GoogleIcon.svg";
+import { Button } from "@/components/ui/button";
+
+const GoogleButton = () => {
+  return (
+    <div>
+      <Button className="bg-[--bg-search] !rounded-[16px] !px-[6.4vw]" size="lg" variant="default">
+        <img src={GoogleIcon} alt="google-icon" />{" "}
+        <span className="Poppins500 !text-[--logo-color] !px-4">Sign in with Google</span>
+      </Button>
+    </div>
+  );
+};
+
+export default GoogleButton;
