@@ -90,7 +90,7 @@ const SignIn = () => {
         >
           <img src={FullMoonSvg} alt="moon" className="!my-8" />
           <img src={LogoSvg} alt="moon" className="!mb-16" />
-          <div className="!border-2 !border-[--border-color] !rounded-[26.37px] !px-9 !py-5">
+          <div className="!border-2 !border-[--border-bg] !rounded-[26.37px] !px-9 !py-5">
             <p className="!text-white text-center Poppins400 !text-[17.58px]">
               Learn more about Horizon UI on
             </p>

@@ -1,67 +1,62 @@
-"use client";
 import React, { useState } from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import Button from "@mui/material/Button";
-import MenuIcon from "@mui/icons-material/Menu";
-import OverView from "@/assets/svg/OverView.svg";
-import Mentors from "@/assets/svg/Mentors.svg";
-import Tasks from "@/assets/svg/Tasks.svg";
-import Message from "@/assets/svg/Message.svg";
-import Settings from "@/assets/svg/Settings.svg";
-import Profile from "@/assets/svg/Profile.svg";
-import Notification from "@/assets/svg/Notification.svg";
-import IconButton from "@mui/material/IconButton";
-import Box from "@mui/material/Box";
-import Image from "next/image";
-import { Drawer } from "@/components/ui/drawer";
+import { IoMenuSharp, IoClose } from "react-icons/io5";
+import Profile from "@/assets/Profile.svg";
+import { Drawer, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerOverlay, DrawerTrigger, DrawerClose } from "@/components/ui/drawer";
+import { Link, useLocation } from 'react-router-dom';
+import Desktop from "@/assets/Desktop.svg";
+import Kanban from "@/assets/Kanban.svg";
+import MarketPlace from "@/assets/MarketPlace.svg";
+import SignIn from "@/assets/SignIn.svg";
+import Tables from "@/assets/Tables.svg";
 
 const HeaderSidebar = () => {
+  const location = useLocation();
   const data = [
-    { id: 1, title: "OverView", src: OverView, alt: "overview", path: "/" },
-    { id: 2, title: "Task", src: Tasks, alt: "task", path: "/task" },
-    { id: 3, title: "Mentors", src: Mentors, alt: "mentors", path: "/mentors" },
-    { id: 4, title: "Message", src: Message, alt: "message", path: "/message" },
-    { id: 5, title: "Settings", src: Settings, alt: "setting", path: "/settings/general" },
+    { id: 0, src: Desktop, alt: 'desktop', primary: 'Dashboard', path: '/' },
+    { id: 1, src: MarketPlace, alt: 'market place', primary: 'NFT Marketplace', path: '/market-place' },
+    { id: 2, src: Tables, alt: 'tables', primary: 'Tables', path: '/tables' },
+    { id: 3, src: Kanban, alt: 'kanban', primary: 'Kanban', path: '/kanban' },
+    { id: 4, src: Profile, alt: 'profile', primary: 'Profile', path: '/profile' },
+    { id: 5, src: SignIn, alt: 'signin', primary: 'Sign In', path: '/signin' },
   ];
 
   const [open, setOpen] = useState(false);
-
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
   return (
     <div>
-      <Box className="!flex !justify-between !items-center !py-3 !px-4">
-        <Button onClick={toggleDrawer(!open)} className="">
-          <MenuIcon className="!text-[--Secondary-500] !text-5xl  !border !border-[--Activity-body] !p-2 !rounded-full" />
-        </Button>
-      </Box>
-      <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-        <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <List>
-            {data.map((item) => (
-              <ListItem key={item.id} className="!px-6">
-                <a href={item.path}>
-                  <ListItemButton className="!p-2">
-                    <Image src={item.src} alt={item.alt} />
-                    <ListItemText primary={item.title} sx={{ fontSize: 24, paddingLeft: 6, paddingRight: 8 }} />
-                  </ListItemButton>
-                </a>
-              </ListItem>
-            ))}
-          </List>
+
+      <Drawer open={open} onClose={toggleDrawer(false)}>
+        <div className="flex justify-between items-center py-3 px-4">
+          <DrawerTrigger onClick={toggleDrawer(true)}> 
+            <IoMenuSharp className="text-[--logo-color] !text-2xl" />
+          </DrawerTrigger>
         </div>
+        <DrawerOverlay onClick={toggleDrawer(false)} />
+        <DrawerContent>
+          <DrawerClose onClick={toggleDrawer(false)}>
+            <IoClose className="text-[--logo-color] text-2xl ml-9" />
+          </DrawerClose>
+          <DrawerHeader>
+            <h3 className="Poppins700 text-[26px] text-[--logo-color]">
+              HORIZON <span className="Poppins400">FREE</span>
+            </h3>
+          </DrawerHeader>
+          <ul>
+            {data.map((list) => (
+              <Link to={list.path} key={list.id}>
+                <li className={`flex flex-row gap-8 py-3 ${location.pathname === list.path ? 'text-[--logo-color] border-r-4 border-r-[--divider-color]' : 'text-[--tab-color]'}`}>
+                  <img src={list.src} alt={list.alt} />
+                  <p className='text-base leading-[30px] Poppins500'>{list.primary}</p>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </DrawerContent>
+
       </Drawer>
-      <Box className="!flex !items-center !gap-2 !py-3 !px-4 !absolute !top-0 !right-0">
-        <IconButton>
-          <Image src={Notification} alt="Notification" />
-        </IconButton>
-        <Image src={Profile} alt="Profile" />
-      </Box>
     </div>
   );
 };

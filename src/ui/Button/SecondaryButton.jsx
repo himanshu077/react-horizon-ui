@@ -3,7 +3,7 @@ import React from "react";
 
 const SecondaryButton = ({ className, title,size }) => {
     return <div>
-        <Button  size={size} className={`${className}`}>{title}</Button>
+        <Button  size={size} className={`${className} hover:!text-[--logo-color] hover:!bg-[--bg-search]`}>{title}</Button>
     </div>;
 };
 

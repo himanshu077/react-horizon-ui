@@ -1,35 +1,28 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import React from "react";
 import { BiLoaderCircle } from "react-icons/bi";
 
-const TableData = ({ columns, data, loading }) => {
+const TableData = ({ columns, data, className, loading }) => {
   return (
-    <>
-      <Table className="table-auto !bg-white !rounded-b-[20px]">
-        <TableHead className="bg-[--table-head-bg]">
+    <div className={`!w-full !bg-white !rounded-b-[20px] !border-none !shadow-none ${className}`}>
+      <Table aria-label="dynamic table">
+        <TableHeader >
           <TableRow>
             {columns?.map((column, index) => (
-              <TableCell
+              <TableHead
                 key={index}
-                sx={{boxShadow: "0px 40px 58px -20px #7090B01F"}}
-                className={`!text-[--table-head] Poppins600 md:!text-xs !text-xs whitespace-nowrap  ${
-                  column.header === "ACTION"
-                    ? "action-heading"
-                    : "!text-[--table-head] Poppins600 text-sm whitespace-nowrap"
-                }`}
+                className={`!text-[--tab-color] Poppins500 md:!text-sm !text-base !border-none !font-semibold ${column.header === "ACTION" ? "action-heading" : ""
+                  }`}
               >
-                {column.header}
-              </TableCell>
+                <div className="!flex !flex-row !gap-2 !py-[5px] !items-center">
+                  {column.header}
+                  {column.icon && <span className="!mt-1">{column.icon}</span>}
+                </div>
+              </TableHead>
             ))}
           </TableRow>
-        </TableHead>
-        <TableBody>
+        </TableHeader>
+        <TableBody  className="!bg-[--table-body]">
           {loading ? (
             <TableRow>
               <TableCell colSpan={columns.length} align="center">
@@ -74,8 +67,9 @@ const TableData = ({ columns, data, loading }) => {
           )}
         </TableBody>
       </Table>
-    </>
+    </div>
   );
 };
 
 export default TableData;
+

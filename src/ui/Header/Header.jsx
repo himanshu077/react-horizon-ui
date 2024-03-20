@@ -6,14 +6,14 @@ import Exclamtery from "@/assets/Exclamtery.svg";
 import BellSvg from "@/assets/BellSvg.svg";
 import Avatar from "@/assets/Avatar.svg";
 
-const Header = ({title}) => {
+const Header = ({ title }) => {
     return (
-        <div className=" container !max-w-8xl mx-auto !pt-10">
-            <div className="!flex !justify-between !items-center">
+        <div className=" container lg:!max-w-8xl !max-w-full lg:!mx-auto !pt-10">
+            <div className="!flex lg:!flex-row !flex-col !gap-4 lg:!justify-between !items-center">
                 <h3 className="text-[--logo-color] !text-4xl !leading-10">
                     {title}
                 </h3>
-                <div className="relative !p-2 !bg-white !flex !items-center !gap-4 !rounded-full">
+                <div className="relative !p-2 !my-5 !hidden !bg-white lg:!flex !items-center !gap-4 !rounded-full" style={{ boxShadow: "14px 17px 40px 4px #7090B014" }}>
                     <div className=''>
                         <Input
                             className="!pl-10 rounded-full !bg-[--bg-search] !w-[214px] border-0"

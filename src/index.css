@@ -45,9 +45,11 @@
     --pending-button: #ffb547;
     --border-color: #e0e5f2;
     --primary-color: #707eae;
-    --border-color: #ffffff33;
+    --border-bg: #ffffff33;
     --card-title: #1b2559;
     --eid-button-color:#11047A;
+    --bg-download:#FAFCFE;
+    --number-color:#05CD99;
   }
 
   .dark {

@@ -20,7 +20,7 @@ const MarketPlace = () => {
         return (
           <div className="flex flex-row gap-2">
             <img src={src} alt={alt} />
-            <p>{props.cell.row.original.name}</p>
+            <p className="Poppins700 !text-sm !text-[--logo-color]">{props.cell.row.original.name}</p>
           </div>
         );
       },
@@ -31,7 +31,7 @@ const MarketPlace = () => {
       cell: (props) => {
         return (
           <div>
-            <p>{props.cell.row.original.artwork}</p>
+            <p className="Poppins500 !text-sm !text-[--tab-color]">{props.cell.row.original.artwork}</p>
           </div>
         );
       },
@@ -72,7 +72,7 @@ const MarketPlace = () => {
               </p>
               <div className="!flex !gap-12 !py-10">
                 <PrimaryButton title="Discover now" />
-                <p className="!text-[--text-color] !text-center !py-2">
+                <p className="!text-[--text-color] !text-center !py-2 !cursor-pointer">
                   Watch video
                 </p>
               </div>
@@ -103,7 +103,7 @@ const MarketPlace = () => {
                 key={data.id}
                 title={data.title}
                 name={data.name}
-                id={data.id}
+                eid={data.eid}
                 src={data.src}
                 alt={data.alt}
               />
@@ -119,7 +119,7 @@ const MarketPlace = () => {
                   key={data.id}
                   title={data.title}
                   name={data.name}
-                  id={data.id}
+                  eid={data.eid}
                   src={data.src}
                   alt={data.alt}
                 />
@@ -133,7 +133,7 @@ const MarketPlace = () => {
               Top Creators
             </h3>
             <SecondaryButton
-              title="See All"
+              title="See all"
               size="sm"
               className=" !text-[--divider-color] !bg-[--bg-search] !rounded-full !py-4 !px-4"
             />
