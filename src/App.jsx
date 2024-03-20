@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="flex min-h-screen bg-blue-50">
       {isSignInPage ? null : (isSmallScreen ? <HeaderSidebar /> : <Sidebar />)}
-      <main>
+      <main className='!flex-1'>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/kanban" element={<Kanban />} />
