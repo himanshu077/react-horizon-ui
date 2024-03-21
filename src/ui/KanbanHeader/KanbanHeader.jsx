@@ -1,5 +1,5 @@
+import SecondaryButton from '@/common/Button/SecondaryButton';
 import React from 'react';
-import SecondaryButton from '../Button/SecondaryButton';
 
 const KanbanHeader = ({title}) => {
   return (

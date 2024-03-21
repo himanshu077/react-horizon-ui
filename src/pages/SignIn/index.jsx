@@ -1,27 +1,26 @@
 import React from "react";
-import SigninBackground from "@/assets/SignInBackground.png";
+import SigninBackground from "@/assets/svg/SignInBackground.png";
 import { FaAngleLeft } from "react-icons/fa";
-import GoogleButton from "@/ui/Button/GoogleButton";
 import { Input } from "@/components/ui/input";
 import { MdOutlineVisibility } from "react-icons/md";
 import { CheckboxButton } from "@/ui/CheckboxButton/CheckboxButton";
-import SecondaryButton from "@/ui/Button/SecondaryButton";
-import FullMoonSvg from "@/assets/FullMoonSvg.svg";
-import LogoSvg from "@/assets/LogoSvg.svg";
-import Footer from "@/ui/Footer/Footer";
+import FullMoonSvg from "@/assets/svg/FullMoonSvg.svg";
+import LogoSvg from "@/assets/svg/LogoSvg.svg";
+import SecondaryButton from "@/common/Button/SecondaryButton";
+import GoogleButton from "@/common/Button/GoogleButton";
 
 const SignIn = () => {
   return (
     <div>
-      <div className="!grid !grid-cols-2 !bg-white">
-        <div className="!col-span-1 !p-3 !container !max-w-md !mx-auto !pt-8">
+      <div className="!grid lg:!grid-cols-2 !bg-white">
+        <div className="lg:!col-span-1 !p-3 !container !max-w-md !mx-auto !pt-8">
           <a href="/" className="!flex !flex-row !gap-3">
             <FaAngleLeft className="!text-[--tab-color] Poppins500  !leading-[30px] !text-sm !my-2" />
             <p className="!text-[--tab-color] Poppins500 !text-sm !leading-[30px]">
               Back to dashboard
             </p>
           </a>
-          <div className="flex flex-col gap-0 !pt-44 w-full my-auto !max-h-screen relative">
+          <div className="flex flex-col gap-0 !pt-24 w-full my-auto !max-h-screen relative">
             <h4 className="!text-left !text-[--logo-color] !text-4xl Poppins700">
               SignIn
             </h4>
@@ -71,7 +70,7 @@ const SignIn = () => {
             <SecondaryButton
               variant="sm"
               title="Sign In"
-              className="!py-6 !px-[10vw] !text-center Poppins700 !text-sm !leading-[14px] !bg-[--divider-color] !rounded-[16px]"
+              className="!py-6 !w-full !px-[10vw] !text-center Poppins700 !text-sm !leading-[14px] !bg-[--divider-color] !rounded-[16px]"
             />
             <p className="!text-[--primary-color] !text-sm Poppins400 !py-6">
               Not registered yet?{" "}
@@ -83,7 +82,7 @@ const SignIn = () => {
           <p className="Poppins400 !text-sm !text-[--tab-color]">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
         </div>
         <div
-          className="!col-span-1 !min-h-screen bg-cover bg-no-repeat !rounded-es-[102.56px] !flex !flex-col !items-center !justify-center"
+          className="lg:!col-span-1 !hidden !min-h-screen bg-cover bg-no-repeat !rounded-es-[102.56px] lg:!flex !flex-col !items-center !justify-center"
           style={{
             backgroundImage: `url(${SigninBackground})`,
           }}

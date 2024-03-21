@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Desktop from "@/assets/Desktop.svg";
-import Kanban from "@/assets/Kanban.svg";
-import MarketPlace from "@/assets/MarketPlace.svg";
-import Profile from "@/assets/Profile.svg";
-import SignIn from "@/assets/SignIn.svg";
-import Tables from "@/assets/Tables.svg";
+import Desktop from "@/assets/svg/Desktop.svg";
+import Kanban from "@/assets/svg/Kanban.svg";
+import MarketPlace from "@/assets/svg/MarketPlace.svg";
+import Profile from "@/assets/svg/Profile.svg";
+import SignIn from "@/assets/svg/SignIn.svg";
+import Tables from "@/assets/svg/Tables.svg";
 
 const Sidebar = () => {
     const location = useLocation();
@@ -20,7 +20,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="h-screen bg-white !w-[16vw] m-0 py-8 !pl-8 sticky top-0 left-0 overflow-auto">
+        <div className="h-screen bg-white !min-w-[16vw] m-0 py-8 !pl-8 sticky top-0 left-0 overflow-auto">
             <div className='!mb-24'>
                 <h3 className='Poppins700 !text-[26px] text-[--logo-color]'>HORIZON <span className='Poppins400 text-[26px] text-[--logo-color]'>FREE</span></h3>
             </div>

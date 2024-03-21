@@ -4,9 +4,9 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import React from "react";
-import BlankHeart from "@/assets/BlankHeart.svg"
-import SecondaryButton from "../Button/SecondaryButton";
+import BlankHeart from "@/assets/svg/BlankHeart.svg"
 import AvatarGroup from "../AvatarGroup/AvatarGroup";
+import SecondaryButton from "@/common/Button/SecondaryButton";
 
 const MarketPlaceCard = ({ src, alt, title, name, eid }) => {
     const avatars = [
@@ -21,10 +21,10 @@ const MarketPlaceCard = ({ src, alt, title, name, eid }) => {
       ];
       
     return (
-        <Card>
-            <CardContent>
+        <Card className="!p-4 !border-none !shadow-none">
+            <CardContent className="p-0">
                 <div className="!relative">
-                    <img src={src} alt={alt} className="rounded-lg !my-5" />
+                    <img src={src} alt={alt} className="rounded-lg !mb-4 !w-full" />
                     <img src={BlankHeart} alt="heart" className="!absolute !right-4 !top-4 !p-2 !bg-white !rounded-full" />
                 </div>
                 <div className="!flex !justify-between">

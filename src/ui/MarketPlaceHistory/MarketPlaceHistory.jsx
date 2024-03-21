@@ -1,7 +1,7 @@
 import React from 'react'
-import SecondaryButton from '../Button/SecondaryButton'
 import HistoryCard from '../HistoryCard/HistoryCard'
 import { historyData } from './Data'
+import SecondaryButton from '@/common/Button/SecondaryButton'
 
 const MarketPlaceHistory = () => {
     return (

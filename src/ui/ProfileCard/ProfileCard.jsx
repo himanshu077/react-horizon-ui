@@ -1,11 +1,11 @@
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import React from "react";
-import Background from "@/assets/Background.png";
-import Avatar from "@/assets/Avatar.svg";
+import Background from "@/assets/svg/Background.png";
+import Avatar from "@/assets/svg/Avatar.svg";
 
 const ProfileCard = () => {
   return (
-    <Card className="p-5 relative !max-w-[552px] !border-0 !rounded-[20px]">
+    <Card className="p-5 relative !w-full !border-0 !rounded-[20px]">
       <CardContent className="p-0">
         <div className="relative">
           <img

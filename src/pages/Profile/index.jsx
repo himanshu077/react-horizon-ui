@@ -1,15 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/ui/Header/Header";
 import ProfileCard from "@/ui/ProfileCard/ProfileCard";
-import MoreSvg from "@/assets/More.svg";
-import StorageSvg from "@/assets/Storage.svg";
+import MoreSvg from "@/assets/svg/More.svg";
+import StorageSvg from "@/assets/svg/Storage.svg";
 import React from "react";
 import { Progress } from "@/components/ui/progress";
-import DownloadSvg from "@/assets/Download.svg";
+import DownloadSvg from "@/assets/svg/Download.svg";
 import { AllProjectData, GeneralInfoData, NotificationData } from "./data";
 import AllProjectCard from "@/ui/AllProjectCard/AllProjectCard";
 import GeneralInformationCard from "@/ui/GeneralInformationCard/GeneralInformationCard";
 import NotificationSwitch from "@/ui/NotificationSwitch/NotificationSwitch";
+import Header from "@/common/Header/Header";
 
 const Profile = () => {
   return (
@@ -17,7 +17,7 @@ const Profile = () => {
       <Header title="Profile" />
       <div className="!flex lg:!flex-row !flex-col !gap-4 !px-5 !pt-3">
         <ProfileCard />
-        <Card className="p-5 !w-[381px] !border-0 !rounded-[20px]">
+        <Card className="p-5 !w-full  !border-none !shadow-none !rounded-[20px]">
           <CardContent className="p-0">
             <img
               src={MoreSvg}
@@ -48,7 +48,7 @@ const Profile = () => {
             <Progress value="53" className="h-2 !mt-3" />
           </CardContent>
         </Card>
-        <Card className="!p-6 !w-[617px]  !rounded-[20px] !border-0">
+        <Card className="!p-6 !w-full  !rounded-[20px] !border-none !shadow-none">
           <CardContent className="p-0 !flex !flex-row !gap-4">
             <div className="!border-dashed !border-2 border-[--border-color] !p-4 !h-[311px] !max-w-[268px] !bg-[--bg-download] !rounded-[13px] flex flex-col !items-center !justify-center">
               <img src={DownloadSvg} alt="download" />
@@ -76,7 +76,7 @@ const Profile = () => {
         {/* All Project card */}
         <Card
           style={{ boxShadow: "14px 17px 40px 4px #7090B014" }}
-          className="p-5 !rounded-[20px] !border-none !max-w-[512px]"
+          className="p-5 !rounded-[20px] !border-none !w-full"
         >
           <CardContent className="p-0">
             <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">
@@ -98,7 +98,7 @@ const Profile = () => {
           </CardContent>
         </Card>
         {/* General information card */}
-        <Card className="p-5 !rounded-[20px] !max-w-[617px] !border-none">
+        <Card className="p-5 !rounded-[20px] !w-full !border-none">
           <CardContent className="!p-0">
             <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">
               General Information
@@ -125,7 +125,7 @@ const Profile = () => {
           </CardContent>
         </Card>
         {/* Notification card */}
-        <Card className="p-4 !rounded-[20px] !w-[421px] !border-none">
+        <Card className="p-4 !rounded-[20px] !w-full !border-none">
           <CardContent className="!p-0">
             <div className="!flex !justify-between">
               <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">
@@ -139,6 +139,7 @@ const Profile = () => {
             </div>
             {NotificationData.map((data) => (
               <NotificationSwitch
+                key={data.id}
                 id={data.id}
                 label={data.label}
                 isChecked={data.isChecked}

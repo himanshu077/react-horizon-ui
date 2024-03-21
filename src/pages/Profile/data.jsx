@@ -1,6 +1,6 @@
-import AllProject from "@/assets/AllProject.svg";
-import AllProject1 from "@/assets/AllProject1.svg";
-import AllProject2 from "@/assets/AllProject2.svg";
+import AllProject from "@/assets/svg/AllProject.svg";
+import AllProject1 from "@/assets/svg/AllProject1.svg";
+import AllProject2 from "@/assets/svg/AllProject2.svg";
 
 export const AllProjectData = [
   {

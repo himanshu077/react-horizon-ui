@@ -1,9 +1,9 @@
-import Android from "@/assets/AndroidLogo.svg";
-import WindowLogo from "@/assets/WindowLogo.svg";
-import AppleLogo from "@/assets/AppleLogo.svg";
-import Approved from "@/assets/Approved.svg";
-import Error from "@/assets/Error.svg";
-import Disabled from "@/assets/Disabled.svg";
+import Android from "@/assets/svg/AndroidLogo.svg";
+import WindowLogo from "@/assets/svg/WindowLogo.svg";
+import AppleLogo from "@/assets/svg/AppleLogo.svg";
+import Approved from "@/assets/svg/Approved.svg";
+import Error from "@/assets/svg/Error.svg";
+import Disabled from "@/assets/svg/Disabled.svg";
 
 export const developmentData = [
   {

@@ -1,11 +1,11 @@
-import Header from "@/ui/Header/Header";
-import TableData from "@/ui/TableData/TableData";
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { checkData, complexData, coulmnData, developmentData } from "./data";
-import TableHeader from "@/ui/TableHeader/TableHeader";
 import { Progress } from "@/components/ui/progress";
 import { CheckboxButton } from "@/ui/CheckboxButton/CheckboxButton";
+import Header from "@/common/Header/Header";
+import TableData from "@/common/TableData/TableData";
+import TableHeader from "@/common/TableHeader/TableHeader";
 
 const Tables = () => {
   const developmentColumns = [

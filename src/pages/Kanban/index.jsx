@@ -1,16 +1,15 @@
-import Header from "@/ui/Header/Header";
 import KanbanCards from "@/ui/KanbanCards/KanbanCards";
-
 import React from "react";
 import { backlogData, doneData, inProgressData } from "./data";
 import KanbanHeader from "@/ui/KanbanHeader/KanbanHeader";
+import Header from "@/common/Header/Header";
 
 const Kanban = () => {
   return (
     <div>
       <Header title="Kanban" />
-      <div className="!grid !grid-cols-3 !gap-8 !px-6 !mt-12">
-        <div className="col-span-1 ">
+      <div className="!grid lg:!grid-cols-3 md:!grid-cols-2 !grid-cols-1 !gap-8 !px-6 !mt-12">
+        <div className="lg:col-span-1 ">
           <div className="!bg-white !rounded-[20px] !p-3">
             {" "}
             <KanbanHeader title="Backlog" />
@@ -27,7 +26,7 @@ const Kanban = () => {
             ))}
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="lg:col-span-1">
           <div className="!bg-white !rounded-[20px] !p-3">
             {" "}
             <KanbanHeader title="In progress" />
@@ -44,7 +43,7 @@ const Kanban = () => {
             ))}
           </div>
         </div>
-        <div className="col-span-1 ">
+        <div className="lg:col-span-1 ">
           <div className="!bg-white !rounded-[20px] !p-3">
             {" "}
             <KanbanHeader title="Done" />

@@ -1,17 +1,17 @@
-import fakurian from "@/assets/fakurian.svg";
-import fakurian1 from "@/assets/fakurian1.svg";
-import fakurian2 from "@/assets/fakurian2.svg";
-import fakurian4 from "@/assets/fakurian4.svg";
-import fakurian3 from "@/assets/fakurian3.svg";
-import fakurian5 from "@/assets/fakurian5.svg";
-import Creator from "@/assets/Creator.svg";
-import Creator1 from "@/assets/Creator1.svg";
-import Creator2 from "@/assets/Creator2.svg";
-import Creator3 from "@/assets/Creator3.svg";
-import Creator4 from "@/assets/Creator4.svg";
-import Creator5 from "@/assets/Creator5.svg";
-import Creator6 from "@/assets/Creator6.svg";
-import Creator7 from "@/assets/Creator7.svg";
+import fakurian from "@/assets/svg/fakurian.svg";
+import fakurian1 from "@/assets/svg/fakurian1.svg";
+import fakurian2 from "@/assets/svg/fakurian2.svg";
+import fakurian4 from "@/assets/svg/fakurian4.svg";
+import fakurian3 from "@/assets/svg/fakurian3.svg";
+import fakurian5 from "@/assets/svg/fakurian5.svg";
+import Creator from "@/assets/svg/Creator.svg";
+import Creator1 from "@/assets/svg/Creator1.svg";
+import Creator2 from "@/assets/svg/Creator2.svg";
+import Creator3 from "@/assets/svg/Creator3.svg";
+import Creator4 from "@/assets/svg/Creator4.svg";
+import Creator5 from "@/assets/svg/Creator5.svg";
+import Creator6 from "@/assets/svg/Creator6.svg";
+import Creator7 from "@/assets/svg/Creator7.svg";
 
 export const trendingNFTData = [
   {

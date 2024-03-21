@@ -1,5 +1,5 @@
 import React from 'react'
-import More from "@/assets/More.svg"
+import More from "@/assets/svg/More.svg"
 
 const TableHeader = ({ title }) => {
     return (

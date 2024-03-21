@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { IoMenuSharp, IoClose } from "react-icons/io5";
-import Profile from "@/assets/Profile.svg";
+import Profile from "@/assets/svg/Profile.svg";
 import { Drawer, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerOverlay, DrawerTrigger, DrawerClose } from "@/components/ui/drawer";
 import { Link, useLocation } from 'react-router-dom';
-import Desktop from "@/assets/Desktop.svg";
-import Kanban from "@/assets/Kanban.svg";
-import MarketPlace from "@/assets/MarketPlace.svg";
-import SignIn from "@/assets/SignIn.svg";
-import Tables from "@/assets/Tables.svg";
+import Desktop from "@/assets/svg/Desktop.svg";
+import Kanban from "@/assets/svg/Kanban.svg";
+import MarketPlace from "@/assets/svg/MarketPlace.svg";
+import SignIn from "@/assets/svg/SignIn.svg";
+import Tables from "@/assets/svg/Tables.svg";
 
 const HeaderSidebar = () => {
   const location = useLocation();

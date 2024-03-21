@@ -1,10 +1,10 @@
 import React from 'react'
 import { IoSearch } from "react-icons/io5";
 import { Input } from "@/components/ui/input";
-import MoonSvg from "@/assets/MoonSvg.svg";
-import Exclamtery from "@/assets/Exclamtery.svg";
-import BellSvg from "@/assets/BellSvg.svg";
-import Avatar from "@/assets/Avatar.svg";
+import MoonSvg from "@/assets/svg/MoonSvg.svg";
+import Exclamtery from "@/assets/svg/Exclamtery.svg";
+import BellSvg from "@/assets/svg/BellSvg.svg";
+import Avatar from "@/assets/svg/Avatar.svg";
 
 const Header = ({ title }) => {
     return (

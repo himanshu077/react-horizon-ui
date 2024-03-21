@@ -1,5 +1,5 @@
-import KanbanImage1 from "@/assets/KanbanImage1.png";
-import KanbanImage2 from "@/assets/KanbanImage2.png";
+import KanbanImage1 from "@/assets/svg/KanbanImage1.png";
+import KanbanImage2 from "@/assets/svg/KanbanImage2.png";
 
 export const backlogData = [
   {

@@ -1,13 +1,13 @@
-import Header from "@/ui/Header/Header";
 import React from "react";
-import NFTImage from "@/assets/NFTImage.png";
-import PrimaryButton from "@/ui/Button/PrimaryButton";
+import NFTImage from "@/assets/svg/NFTImage.png";
 import MarketPlaceCard from "@/ui/MarketPlaceCard/MarketPlaceCard";
 import { RecentlyAddedData, topCreatorsData, trendingNFTData } from "./data";
-import TableData from "@/ui/TableData/TableData";
-import SecondaryButton from "@/ui/Button/SecondaryButton";
 import { Progress } from "@/components/ui/progress";
 import MarketPlaceHistory from "@/ui/MarketPlaceHistory/MarketPlaceHistory";
+import TableData from "@/common/TableData/TableData";
+import SecondaryButton from "@/common/Button/SecondaryButton";
+import PrimaryButton from "@/common/Button/PrimaryButton";
+import Header from "@/common/Header/Header";
 
 const MarketPlace = () => {
   const Columns = [
@@ -49,9 +49,9 @@ const MarketPlace = () => {
     <div>
       <Header title="NFT Marketplace" />
       <div className="!grid !grid-cols-3 !gap-5 !px-4 !mt-8">
-        <div className="!col-span-2 relative">
+        <div className="lg:!col-span-2 !col-span-full  relative">
           <div
-            className="bg-cover bg-no-repeat !w-[55vw] !h-[350px] !py-7 !p-4 !rounded-[20px] relative"
+            className="bg-cover bg-no-repeat lg:!min-w-[55vw] !w-full !h-[350px] !py-7 !p-4 !rounded-[20px] relative"
             style={{
               backgroundImage: `url(${NFTImage})`,
             }}
@@ -127,7 +127,7 @@ const MarketPlace = () => {
             </div>
           </div>
         </div>
-        <div className="!col-span-1 !pl-3 ">
+        <div className="xl:!col-span-1 !col-span-full  !pl-3 ">
           <div className="!rounded-t-[16px] !bg-white !p-4 !flex !justify-between">
             <h3 className="Poppins700 !text-xl !text-[--card-title]">
               Top Creators

@@ -1,6 +1,6 @@
 import React from "react";
-import Edit from "@/assets/Edit.svg";
-import SecondaryButton from "../Button/SecondaryButton";
+import Edit from "@/assets/svg/Edit.svg";
+import SecondaryButton from "@/common/Button/SecondaryButton";
 
 const KanbanCards = ({ title, description, buttonClass, buttonTitle ,imgSrc,imgAlt}) => {
     return (

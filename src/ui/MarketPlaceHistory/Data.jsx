@@ -1,9 +1,9 @@
-import HistoryImage from "@/assets/HistoryImage.svg";
-import HistoryImage1 from "@/assets/HistoryImage1.svg";
-import HistoryImage2 from "@/assets/HistoryImage2.svg";
-import HistoryImage3 from "@/assets/HistoryImage3.svg";
-import HistoryImage4 from "@/assets/HistoryImage4.svg";
-import HistoryImage5 from "@/assets/HistoryImage5.svg";
+import HistoryImage from "@/assets/svg/HistoryImage.svg";
+import HistoryImage1 from "@/assets/svg/HistoryImage1.svg";
+import HistoryImage2 from "@/assets/svg/HistoryImage2.svg";
+import HistoryImage3 from "@/assets/svg/HistoryImage3.svg";
+import HistoryImage4 from "@/assets/svg/HistoryImage4.svg";
+import HistoryImage5 from "@/assets/svg/HistoryImage5.svg";
 
 export const historyData = [
   {

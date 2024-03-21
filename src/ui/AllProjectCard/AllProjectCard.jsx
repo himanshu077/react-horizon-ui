@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
-import EditSvg from "@/assets/Edit.svg";
+import EditSvg from "@/assets/svg/Edit.svg";
 
 const AllProjectCard = ({ title, project, src, alt }) => {
   return (
