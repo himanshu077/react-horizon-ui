@@ -12,7 +12,6 @@ import Footer from './common/Footer/Footer';
 
 function App() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [isHeaderSidebarOpen, setIsHeaderSidebarOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -31,8 +30,9 @@ function App() {
   const isSignInPage = location.pathname === '/signin';
 
   return (
-    <div className="flex min-h-screen bg-blue-50">
+    <div className="flex min-h-screen !w-full ">
       {isSignInPage ? null : (isSmallScreen ? null : <Sidebar />)}
+      {isSignInPage ? null : (isSmallScreen ? <HeaderSidebar /> : null)}
       <main className='flex-1'>
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -42,9 +42,8 @@ function App() {
           <Route path="/tables" element={<Tables />} />
           <Route path="/signin" element={<SignIn />} />
         </Routes>
-        {isSignInPage ? null : (isSmallScreen ? null : <Footer />)}
+        {isSignInPage ? null :  <Footer />}
       </main>
-      {isSignInPage ? null : (isSmallScreen ? <HeaderSidebar isOpen={isHeaderSidebarOpen} /> : null)}
     </div>
   );
 }

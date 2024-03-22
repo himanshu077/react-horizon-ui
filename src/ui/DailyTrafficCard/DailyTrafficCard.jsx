@@ -5,7 +5,7 @@ import DailyBarChart from "@/common/Charts/DailyBarChart"
 
 const DailyTrafficCard = () => {
   return (
-    <Card className="!p-5 !border-none w-full !shadow-none !bg-white !rounded-[20px]">
+    <Card className="!p-5 !border-none xl:!w-[19.5vw] !w-full !shadow-none !bg-[--signin-bg] !rounded-[20px]">
       <CardContent className="!p-0">
         <div className='!flex !justify-between !mb-5'>
           <div>

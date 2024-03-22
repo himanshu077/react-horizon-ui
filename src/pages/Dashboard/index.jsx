@@ -17,13 +17,14 @@ import TaskCard from "@/ui/TaskCard/TaskCard";
 import TableData from "@/common/TableData/TableData";
 import Header from "@/common/Header/Header";
 import TableHeader from "@/common/TableHeader/TableHeader";
-import CalendarComponent from "@/common/Calender/Calender";
 import BusinessDesignCard from "@/ui/BusinessDesignCard/BusinessDesignCard";
 import TeamMemberCard from "@/ui/TeamMemberCard/TeamMemberCard";
 import SecurityCard from "@/ui/SecurityCard/SecurityCard";
 import StarbugsCard from "@/ui/StarbugsCard/StarbugsCard";
+import { Calendar } from "@/components/ui/calendar";
 
 const Dashboard = () => {
+  const [date, setDate] = React.useState(new Date())
   const checkColumns = [
     {
       header: "NAME",
@@ -138,9 +139,9 @@ const Dashboard = () => {
   return (
     <>
       <Header title="Main Dashboard" />
-      <div className=" !grid lg:!grid-cols-6 md:!grid-cols-3 !grid-cols-1 !gap-3 !px-4">
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
-          <CardContent className="!p-0 !flex !py-3 !gap-4">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 px-5">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
+          <CardContent className="!p-0 !flex !py-2 !gap-4">
             <img
               src={Earning}
               alt="earning"
@@ -156,8 +157,8 @@ const Dashboard = () => {
             </div>
           </CardContent>
         </Card>
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
-          <CardContent className="!p-0 !flex !py-3 !gap-4">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
+          <CardContent className="!p-0 !flex !py-2 !gap-4">
             <img
               src={Dollar}
               alt="earning"
@@ -173,7 +174,7 @@ const Dashboard = () => {
             </div>
           </CardContent>
         </Card>
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
           <CardContent className="!p-0">
             <p className="Poppins500 !text-sm !leading-6 !text-[--tab-color]">
               Sales
@@ -189,8 +190,8 @@ const Dashboard = () => {
             </p>
           </CardContent>
         </Card>
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
-          <CardContent className="!p-0 !flex !justify-evenly !py-3 !gap-4 !items-center">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
+          <CardContent className="!p-0 !flex lg:!justify-evenly !py-2 !gap-4 !items-center">
             <div>
               <p className="Poppins500 !text-sm !leading-6 !text-[--tab-color]">
                 Your balance
@@ -203,8 +204,8 @@ const Dashboard = () => {
             <IoChevronDown className="!text-[--tab-color]" />
           </CardContent>
         </Card>
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
-          <CardContent className="!p-0 !flex !py-3 !gap-4">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
+          <CardContent className="!p-0 !flex !py-2 !gap-4">
             <img
               src={NewTask}
               alt="earning"
@@ -221,8 +222,8 @@ const Dashboard = () => {
             </div>
           </CardContent>
         </Card>
-        <Card className="!p-3 !rounded-[16px] !min-w-[240px] !border-none !shadow-none">
-          <CardContent className="!p-0 !flex !py-3 !gap-4">
+        <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] !w-full !border-none bg-[--signin-bg] !shadow-none">
+          <CardContent className="!p-0 !flex !py-2 !gap-4">
             <img
               src={CopySvg}
               alt="copy"
@@ -239,20 +240,20 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
-      <div className="!flex !flex-row !gap-5 !mx-6">
+      <div className="!flex xl:!flex-row !flex-col !gap-5 !mx-6">
         <TotalSpendCard />
         <WeeklyRevenueCard />
       </div>
-      <div className="!m-5 !flex !gap-5">
-        <div className="!rounded-[16px] !min-w-[750px] !bg-white">
+      <div className="!m-5 !flex xl:!flex-row !flex-col !gap-5">
+        <div className="!rounded-[16px] xl:!w-[40vw] !w-full !bg-[--signin-bg]">
           <TableHeader title="Check Table" />
           <TableData columns={checkColumns} data={checkData} loading={false} />
         </div>
         <DailyTrafficCard />
         <YourPieChart />
       </div>
-      <div className="!m-5 !flex !gap-5">
-        <div className="!rounded-[16px] !min-w-[750px] !bg-white">
+      <div className="!m-5 !flex xl:!flex-row !flex-col !gap-5">
+        <div className="!rounded-[16px] xl:!w-[40vw] !w-full !bg-[--signin-bg]">
           <TableHeader title="Complex Table" />
           <TableData
             columns={complexColumns}
@@ -261,13 +262,18 @@ const Dashboard = () => {
           />
         </div>
         <TaskCard />
-        <CalendarComponent />
+        <Calendar
+          className="!bg-[--signin-bg] !rounded-[20px] xl:!w-[19.5vw] !w-full !flex !justify-center"
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+        />
       </div>
-      <div className="!mx-5 !flex !gap-5">
+      <div className="!mx-5 !flex xl:!flex-row !flex-col !gap-5">
         <BusinessDesignCard />
         <TeamMemberCard />
         <SecurityCard />
-        <StarbugsCard/>
+        <StarbugsCard />
       </div>
     </>
   );

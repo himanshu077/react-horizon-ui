@@ -5,7 +5,7 @@ import EditSvg from "@/assets/svg/Edit.svg";
 const AllProjectCard = ({ title, project, src, alt }) => {
   return (
     <Card
-      className="!p-3 !mt-6 !border-none "
+      className="!p-3 !mt-6 bg-[--signin-bg] !border-none "
       style={{ boxShadow: " 0px 18px 40px 0px #7090B01F" }}
     >
       <CardContent className="p-0 !flex !justify-between">

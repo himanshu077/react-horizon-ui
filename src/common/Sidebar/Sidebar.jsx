@@ -6,6 +6,7 @@ import MarketPlace from "@/assets/svg/MarketPlace.svg";
 import Profile from "@/assets/svg/Profile.svg";
 import SignIn from "@/assets/svg/SignIn.svg";
 import Tables from "@/assets/svg/Tables.svg";
+import UpgradeToPRO from '@/ui/UpgradeToPRO/UpgradeToPRO';
 
 const Sidebar = () => {
     const location = useLocation();
@@ -20,7 +21,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="h-screen bg-white !min-w-[16vw] m-0 py-8 !pl-8 sticky top-0 left-0 overflow-auto">
+        <div className="h-screen bg-[--signin-bg] !min-w-[290px] m-0 py-8 !pl-8 sticky top-0 left-0 overflow-auto">
             <div className='!mb-24'>
                 <h3 className='Poppins700 !text-[26px] text-[--logo-color]'>HORIZON <span className='Poppins400 text-[26px] text-[--logo-color]'>FREE</span></h3>
             </div>
@@ -36,6 +37,7 @@ const Sidebar = () => {
                     ))}
                 </ul>
             </div>
+            <UpgradeToPRO/>
         </div>
     );
 };

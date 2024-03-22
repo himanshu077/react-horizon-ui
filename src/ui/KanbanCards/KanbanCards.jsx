@@ -5,7 +5,7 @@ import SecondaryButton from "@/common/Button/SecondaryButton";
 const KanbanCards = ({ title, description, buttonClass, buttonTitle ,imgSrc,imgAlt}) => {
     return (
         <div
-            className="!bg-white !rounded-[20px] !p-3 !mb-4"
+            className="!bg-[--signin-bg] !rounded-[20px] !p-3 !mb-4"
             style={{ boxShadow: " 0px 18px 40px 0px #7090B01F" }}
         >
             <div className="!flex !justify-between ">

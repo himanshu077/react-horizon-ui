@@ -60,7 +60,7 @@ const Tables = () => {
         return (
           <div className="!flex !justify-between !gap-2">
             <p className="Poppins700 !text-sm !text-[--logo-color]">{title}%</p>
-            <Progress value={title} className="!h-2 !mt-2" />
+            <Progress value={title} className="!h-2 !mt-2 !w-full" />
           </div>
         );
       },
@@ -235,7 +235,7 @@ const Tables = () => {
         const title = props.cell.row.original.title3;
         return (
           <div className="!flex !justify-between !gap-2">
-            <Progress value={title} className="!h-2" />
+            <Progress value={title} className="!h-2 !w-full" />
           </div>
         );
       },
@@ -246,7 +246,7 @@ const Tables = () => {
     <div>
       <Header title="Tables" />
       <div className="!grid lg:!grid-cols-2 !grid-cols-1 !gap-4 !px-3">
-        <div className="!rounded-[16px] !bg-white">
+        <div className="!rounded-[16px] !bg-[--signin-bg]">
           <TableHeader title="Development Table" />
           <TableData
             columns={developmentColumns}
@@ -254,15 +254,15 @@ const Tables = () => {
             loading={false}
           />
         </div>
-        <div className="!rounded-[16px] !bg-white">
+        <div className="!rounded-[16px] !bg-[--signin-bg]">
           <TableHeader title="Check Table" />
           <TableData columns={checkColumns} data={checkData} loading={false} />
         </div>
-        <div className="!rounded-[16px] !bg-white">
+        <div className="!rounded-[16px] !bg-[--signin-bg]">
           <TableHeader title="4-Column Table" />
           <TableData columns={Columns} data={coulmnData} loading={false} />
         </div>
-        <div className="!rounded-[16px] !bg-white">
+        <div className="!rounded-[16px] !bg-[--signin-bg]">
           <TableHeader title="Complex Table" />
           <TableData
             columns={complexColumns}

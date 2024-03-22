@@ -32,7 +32,7 @@ const TeamMemberCard = () => {
     ];
 
     return (
-        <Card className="!p-4 !bg-white !w-full !shadow-none !border-none !rounded-[20px]">
+        <Card className="!p-4 !bg-[--signin-bg] !w-full !shadow-none !border-none !rounded-[20px]">
             <CardContent className="!p-0">
                 <div className="!flex !justify-between">
                     <p className="Poppins700 !text-lg !leading-[32px] !text-[--logo-color]">
@@ -47,7 +47,7 @@ const TeamMemberCard = () => {
                 {TeamData.map((data) => (
                     <Card
                         key={data.id}
-                        className="!p-2 !mt-3 !w-full !bg-white !border-none !rounded-[16px]"
+                        className="!p-2 !mt-3 !w-full !bg-[--signin-bg] !border-none !rounded-[16px]"
                         style={{ boxShadow: "0px 18px 40px 0px #7090B01F" }}
                     >
                         <CardContent className="!p-0 !flex !justify-between">

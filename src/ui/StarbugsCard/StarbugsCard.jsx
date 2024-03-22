@@ -7,7 +7,7 @@ import Food from "@/assets/svg/Food.svg"
 
 const StarbugsCard = () => {
     return (
-        <Card className="p-4 shadow-none w-full border-none bg-white rounded-[20px]">
+        <Card className="p-4 shadow-none w-full border-none !bg-[--signin-bg] rounded-[20px]">
             <CardContent className="p-0">
                 <div className='!relative'>
                 <img src={Starbugs} alt='starbug' className='!w-full' />

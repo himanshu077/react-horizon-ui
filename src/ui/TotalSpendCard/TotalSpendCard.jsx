@@ -9,7 +9,7 @@ import SpendLineChart from "@/common/Charts/SpendLineChart";
 
 const TotalSpendCard = () => {
     return (
-            <Card className="!p-6 !bg-white !w-full !rounded-[20px] !mt-6 !shadow-none !border-none">
+            <Card className="!p-6 !bg-[--signin-bg] xl:!w-[40vw] !w-full !rounded-[20px] !mt-6 !shadow-none !border-none">
                 <CardContent className="!p-0">
                     <div className="!flex !justify-between">
                         <SecondaryButton
@@ -25,7 +25,7 @@ const TotalSpendCard = () => {
                             className="!p-2 !bg-[--bg-search] !rounded-[10px]"
                         />
                     </div>
-                    <div className="!mt-4 !flex !gap-5">
+                    <div className=" !flex lg:!flex-row !flex-col !items-center !gap-5">
                         <div>
                             <h3 className="Poppins700 !text-[34px] !leading-[42px] !text-[--logo-color]">
                                 $37.5K
@@ -44,7 +44,7 @@ const TotalSpendCard = () => {
                                 <p className="!text-[--number-color] Poppins700 !text-base !leading-[28px]">On track</p>
                             </div>
                         </div>
-                        <SpendLineChart />
+                        <SpendLineChart className="!mt-4"/>
                     </div>
                 </CardContent>
             </Card>

@@ -5,7 +5,7 @@ import PieCharts from "@/common/Charts/PieChart";
 
 const YourPieChart = () => {
   return (
-    <Card className="!p-5 !bg-white !w-full !rounded-[20px] !shadow-none !border-none">
+    <Card className="!p-5 !bg-[--signin-bg] xl:!w-[19.5vw] lg:!w-full !rounded-[20px] !shadow-none !border-none">
       <CardContent className="p-0">
         <div className="!flex !justify-between">
           <h4 className="Poppins700 !text-base !leading-7 !text-[--logo-color]">
@@ -18,7 +18,7 @@ const YourPieChart = () => {
         </div>
         <PieCharts />
         <Card
-          className="!p-5 !bg-white !w-full !rounded-[20px] !border-none"
+          className="!p-5 !bg-[--signin-bg] !w-full !rounded-[20px] !border-none"
           style={{ boxShadow: "0px 18px 40px 0px #7090B01F" }}
         >
           <CardContent className="p-0 !flex  !justify-between">

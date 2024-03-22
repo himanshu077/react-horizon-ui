@@ -15,9 +15,9 @@ const Profile = () => {
   return (
     <div>
       <Header title="Profile" />
-      <div className="!flex lg:!flex-row !flex-col !gap-4 !px-5 !pt-3">
+      <div className="!flex xl:!flex-row !flex-col !gap-4 !px-5">
         <ProfileCard />
-        <Card className="p-5 !w-full  !border-none !shadow-none !rounded-[20px]">
+        <Card className="p-5 xl:!w-[20vw] !w-full bg-[--signin-bg] !border-none !shadow-none !rounded-[20px]">
           <CardContent className="p-0">
             <img
               src={MoreSvg}
@@ -45,10 +45,10 @@ const Profile = () => {
                 50 Gb
               </p>
             </div>
-            <Progress value="53" className="h-2 !mt-3" />
+            <Progress value="53" className="h-2 !mt-3 !w-full" />
           </CardContent>
         </Card>
-        <Card className="!p-6 !w-full  !rounded-[20px] !border-none !shadow-none">
+        <Card className="!p-6 xl:!w-[31.4vw] !w-full bg-[--signin-bg] !rounded-[20px] !border-none !shadow-none">
           <CardContent className="p-0 !flex !flex-row !gap-4">
             <div className="!border-dashed !border-2 border-[--border-color] !p-4 !h-[311px] !max-w-[268px] !bg-[--bg-download] !rounded-[13px] flex flex-col !items-center !justify-center">
               <img src={DownloadSvg} alt="download" />
@@ -72,11 +72,11 @@ const Profile = () => {
           </CardContent>
         </Card>
       </div>
-      <div className="!flex lg:!flex-row !flex-col !gap-4 !px-5 !pt-6">
+      <div className="!flex xl:!flex-row !flex-col !gap-4 !px-5 !pt-6">
         {/* All Project card */}
         <Card
           style={{ boxShadow: "14px 17px 40px 4px #7090B014" }}
-          className="p-5 !rounded-[20px] !border-none !w-full"
+          className="p-5 !rounded-[20px] bg-[--signin-bg] !border-none xl:!w-[26.2vw] !w-full"
         >
           <CardContent className="p-0">
             <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">
@@ -98,7 +98,7 @@ const Profile = () => {
           </CardContent>
         </Card>
         {/* General information card */}
-        <Card className="p-5 !rounded-[20px] !w-full !border-none">
+        <Card className="p-5 !rounded-[20px] bg-[--signin-bg] xl:!w-[32vw] !w-full !border-none">
           <CardContent className="!p-0">
             <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">
               General Information
@@ -125,7 +125,7 @@ const Profile = () => {
           </CardContent>
         </Card>
         {/* Notification card */}
-        <Card className="p-4 !rounded-[20px] !w-full !border-none">
+        <Card className="p-4 !rounded-[20px] bg-[--signin-bg] xl:!w-[21vw] !w-full !border-none">
           <CardContent className="!p-0">
             <div className="!flex !justify-between">
               <h4 className="Poppins700 !text-2xl !text-[--logo-color] !py-3">

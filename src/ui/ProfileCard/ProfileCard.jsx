@@ -5,7 +5,7 @@ import Avatar from "@/assets/svg/Avatar.svg";
 
 const ProfileCard = () => {
   return (
-    <Card className="p-5 relative !w-full !border-0 !rounded-[20px]">
+    <Card className="p-5 relative !bg-[--signin-bg] xl:!w-[28vw] !w-full !border-0 !rounded-[20px]">
       <CardContent className="p-0">
         <div className="relative">
           <img

@@ -3,23 +3,23 @@ import React from "react";
 import Trending from "@/assets/svg/Trending.svg";
 import Timer from "@/assets/svg/Timer.svg";
 import Reels from "@/assets/svg/Reels.svg";
-import AvatarGroup from "../AvatarGroup/AvatarGroup";
 import SecondaryButton from "@/common/Button/SecondaryButton";
+import AvatarGroup from "../AvatarGroup/AvatarGroup";
+import Avatar2 from "@/assets/svg/Avatar2.svg"
+import Avatar3 from "@/assets/svg/Avatar3.svg"
+import Avatar from "@/assets/svg/Avatar1.svg"
+import Avatar4 from "@/assets/svg/Avatar4.svg"
 
 const BusinessDesignCard = () => {
 
     const avatars = [
-        { name: 'John Doe', image: 'https://via.placeholder.com/150' },
-        { name: 'Jane Smith', image: 'https://via.placeholder.com/150' },
-        { name: 'Alice Johnson', image: 'https://via.placeholder.com/150' },
-        { name: 'Bob Brown', image: 'https://via.placeholder.com/150' },
-        { name: 'Emily White', image: 'https://via.placeholder.com/150' },
-        { name: 'Michael Green', image: 'https://via.placeholder.com/150' },
-        { name: 'Sarah Black', image: 'https://via.placeholder.com/150' },
-        { name: 'David Grey', image: 'https://via.placeholder.com/150' },
-      ];
+        { id: 0, src: Avatar, alt: "avatar" },
+        { id: 1, src: Avatar2, alt: "avatar" },
+        { id: 2, src: Avatar3, alt: "avatar" },
+        { id: 3, src: Avatar4, alt: "avatar" },
+    ];
     return (
-        <Card className="!p-6 !shadow-none !w-full !border-none !bg-white !rounded-[20px]">
+        <Card className="!p-6 !shadow-none !w-full !border-none !bg-[--signin-bg] !rounded-[20px]">
             <CardContent className="!p-0">
                 <div className="!flex !gap-2 ">
                     <img
@@ -50,7 +50,7 @@ const BusinessDesignCard = () => {
                     </div>
                 </div>
                 <div className="!flex !justify-between">
-                    <AvatarGroup avatars={avatars} maxCount={3}/>
+                <AvatarGroup avatars={avatars} maxNumber={2}/>
                     <SecondaryButton title="Get Started" className="!rounded-[16px] !bg-[--divider-color] !text-white !text-center !text-sm Poppins700"/>
                 </div>
             </CardContent>
