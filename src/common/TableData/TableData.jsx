@@ -4,7 +4,7 @@ import { BiLoaderCircle } from "react-icons/bi";
 
 const TableData = ({ columns, data, className, loading }) => {
   return (
-    <div className={`!w-full !bg-white !rounded-b-[20px] overflow-auto !border-none !shadow-none ${className}`}>
+    <div className={`!w-full !bg-[--signin-bg] !rounded-b-[20px] overflow-auto !border-none !shadow-none ${className}`}>
       <Table aria-label="dynamic table">
         <TableHeader >
           <TableRow>

@@ -4,7 +4,7 @@ import Icon from "@/assets/svg/Icon.svg"
 
 const HistoryCard = ({ alt, src,name,time,eth,title }) => {
     return (
-        <Card className="!my-3 !p-2 !border-none !shadow-none">
+        <Card className="!my-3 !p-2 !bg-[--signin-bg] !border-none !shadow-none">
             <CardContent className="!flex !justify-between !gap-3  !p-0">
                 <img src={src} alt={alt} className="!rounded-[12px] w-[66px] h-[66px]"/>
                 <div className="!py-2">

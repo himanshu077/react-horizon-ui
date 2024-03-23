@@ -5,7 +5,7 @@ import SecondaryButton from '@/common/Button/SecondaryButton'
 
 const MarketPlaceHistory = () => {
     return (
-        <div className='!my-4 !bg-white !rounded-[16px] !p-4 '>
+        <div className='!my-4 !bg-[--signin-bg] !w-full !rounded-[16px] !p-4 '>
             <div className="!flex !justify-between">
                 <h3 className="Poppins700 !text-xl !text-[--card-title]">
                     History

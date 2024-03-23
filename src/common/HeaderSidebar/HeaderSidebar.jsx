@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { IoMenuSharp, IoClose } from "react-icons/io5";
 import Profile from "@/assets/svg/Profile.svg";
-import { Drawer, DrawerContent, DrawerHeader, DrawerFooter, DrawerTitle, DrawerOverlay, DrawerTrigger, DrawerClose } from "@/components/ui/drawer";
 import { Link, useLocation } from 'react-router-dom';
 import Desktop from "@/assets/svg/Desktop.svg";
 import Kanban from "@/assets/svg/Kanban.svg";
 import MarketPlace from "@/assets/svg/MarketPlace.svg";
 import SignIn from "@/assets/svg/SignIn.svg";
 import Tables from "@/assets/svg/Tables.svg";
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetOverlay, SheetTrigger } from "@/components/ui/sheet";
 
 const HeaderSidebar = () => {
   const location = useLocation();
@@ -28,22 +28,22 @@ const HeaderSidebar = () => {
   return (
     <div>
 
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Sheet open={open} onClose={toggleDrawer(false)} className="!h-screen">
         <div className="flex justify-between items-center py-3 px-4">
-          <DrawerTrigger onClick={toggleDrawer(true)}> 
+          <SheetTrigger onClick={toggleDrawer(true)}>
             <IoMenuSharp className="text-[--logo-color] !text-2xl" />
-          </DrawerTrigger>
+          </SheetTrigger>
         </div>
-        <DrawerOverlay onClick={toggleDrawer(false)} />
-        <DrawerContent>
-          <DrawerClose onClick={toggleDrawer(false)}>
-            <IoClose className="text-[--logo-color] text-2xl ml-9" />
-          </DrawerClose>
-          <DrawerHeader>
+        <SheetOverlay onClick={toggleDrawer(false)} />
+        <SheetContent  side="left">
+          <SheetClose onClick={toggleDrawer(false)}>
+            <IoClose className="text-[--logo-color] text-2xl ml-2" />
+          </SheetClose>
+          <SheetHeader>
             <h3 className="Poppins700 text-[26px] text-[--logo-color]">
               HORIZON <span className="Poppins400">FREE</span>
             </h3>
-          </DrawerHeader>
+          </SheetHeader>
           <ul>
             {data.map((list) => (
               <Link to={list.path} key={list.id}>
@@ -54,9 +54,8 @@ const HeaderSidebar = () => {
               </Link>
             ))}
           </ul>
-        </DrawerContent>
-
-      </Drawer>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };

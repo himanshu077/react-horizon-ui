@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SigninBackground from "@/assets/svg/SignInBackground.png";
 import { FaAngleLeft } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
@@ -8,11 +8,24 @@ import FullMoonSvg from "@/assets/svg/FullMoonSvg.svg";
 import LogoSvg from "@/assets/svg/LogoSvg.svg";
 import SecondaryButton from "@/common/Button/SecondaryButton";
 import GoogleButton from "@/common/Button/GoogleButton";
+import { FaRegSun } from "react-icons/fa";
+import { HiMoon } from "react-icons/hi2";
+import Footer from "@/common/Footer/Footer";
 
 const SignIn = () => {
+
+  const options = ["Marketplace", "License", "Terms of Use", "Blog"];
+  const [value, setValue] = useState("light")
+
+  const handleChange = () => {
+    const newTheme = value === "light" ? "dark" : "light";
+    setValue(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+
   return (
     <div>
-      <div className="!grid lg:!grid-cols-2 !bg-white">
+      <div className="!grid lg:!grid-cols-2 !bg-[--signin-bg] !relative">
         <div className="lg:!col-span-1 !p-3 !container !max-w-md !mx-auto !pt-8">
           <a href="/" className="!flex !flex-row !gap-3">
             <FaAngleLeft className="!text-[--tab-color] Poppins500  !leading-[30px] !text-sm !my-2" />
@@ -79,7 +92,7 @@ const SignIn = () => {
               </span>
             </p>
           </div>
-          <p className="Poppins400 !text-sm !text-[--tab-color]">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
+          <p className="Poppins400 !text-sm !text-[--tab-color] !absolute !bottom-0 !mb-12">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!</p>
         </div>
         <div
           className="lg:!col-span-1 !hidden !min-h-screen bg-cover bg-no-repeat !rounded-es-[102.56px] lg:!flex !flex-col !items-center !justify-center"
@@ -97,6 +110,16 @@ const SignIn = () => {
               horizon-ui.com
             </h3>
           </div>
+        </div>
+      </div>
+      <div className="!flex xl:!gap-40 !absolute lg:!m-6 !bottom-0 !right-0">
+        <div className="!flex !gap-10 !mt-3">
+          {options.map((option) => (
+            <p key={option} className="Poppins400 !text-sm !text-white">{option}</p>
+          ))}
+        </div>
+        <div onClick={handleChange} className=" !p-4  lg:!inline !hidden !border !border-[#6A53FF] !rounded-full " style={{ background: 'linear-gradient(135deg, #868CFF 0%, #4318FF 100%)' }}>
+          {value === "light" ? <HiMoon className="!text-white !text-2xl " /> : <FaRegSun className="!text-white !text-2xl" />}
         </div>
       </div>
     </div>

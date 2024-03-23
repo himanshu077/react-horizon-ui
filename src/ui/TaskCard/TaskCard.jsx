@@ -14,7 +14,7 @@ const TaskCard = () => {
     ];
 
     return (
-        <Card className="!p-5 !w-full !shadow-none !border-none !bg-white !rounded-[20px]">
+        <Card className="!p-5 xl:!w-[19.5vw] !w-full !shadow-none !border-none !bg-[--signin-bg] !rounded-[20px]">
             <CardContent className="!p-0">
                 <div className="!flex !justify-between">
                     <CheckboxButton
