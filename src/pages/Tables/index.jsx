@@ -78,6 +78,7 @@ const Tables = () => {
             <CheckboxButton
               label={props.cell.row.original.title}
               labelClass="font-bold !text-sm !text-[--logo-color]"
+              isChecked={props.cell.row.original.isChecked}
             />
           </div>
         );
@@ -244,7 +245,7 @@ const Tables = () => {
 
   return (
     <div>
-      <Header title="Tables" />
+      <Header title="Tables" showEthInfo={false}/>
       <div className="!grid lg:!grid-cols-2 !grid-cols-1 !gap-4 !px-3">
         <div className="!rounded-[16px] !bg-[--signin-bg]">
           <TableHeader title="Development Table" />

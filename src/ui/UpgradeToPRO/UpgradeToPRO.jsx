@@ -5,7 +5,7 @@ const UpgradeToPRO = () => {
   return (
     <div className="relative">
       <div
-        className="!w-[11vw] !rounded-[24px] !flex !p-4 !flex-col !justify-center !items-center !mt-56"
+        className="xl:!w-[11vw] !w-[17vw] !rounded-[24px] !h-[190px] !flex !p-4 !flex-col !justify-center !items-center !mt-[23vh]"
         style={{
           background: "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",
         }}
@@ -18,7 +18,7 @@ const UpgradeToPRO = () => {
         </p>
    
       </div>
-      <div className="absolute -top-8 left-[5.5vw] transform -translate-x-1/2 ">
+      <div className="absolute -top-8 xl:!left-[5.5vw] lg:!left-[8vw] transform -translate-x-1/2 ">
         <div className="!text-white !text-3xl !p-3 !flex !justify-center !items-center !rounded-full !border-[5px] border-white"
           style={{
             background: "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",

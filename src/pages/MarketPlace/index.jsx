@@ -6,10 +6,9 @@ import { Progress } from "@/components/ui/progress";
 import MarketPlaceHistory from "@/ui/MarketPlaceHistory/MarketPlaceHistory";
 import TableData from "@/common/TableData/TableData";
 import SecondaryButton from "@/common/Button/SecondaryButton";
-import PrimaryButton from "@/common/Button/PrimaryButton";
 import More from "@/assets/svg/More.svg"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import MarketPlaceHeader from "@/common/MarketPlaceHeader/MarketPlaceHeader";
+import Header from "@/common/Header/Header";
 
 const MarketPlace = () => {
 
@@ -51,9 +50,9 @@ const MarketPlace = () => {
     },
   ];
   return (
-    <div>
-      <MarketPlaceHeader title="NFT Marketplace"/>
-      <div className="!grid xl:!grid-cols-3 !gap-5 !px-4">
+    <>
+      <Header title="NFT Marketplace" showEthInfo={true}/>
+      <div className="!grid xl:!grid-cols-3 !grid-cols-1 !gap-5 !px-4">
         <div className="xl:!col-span-2 !col-span-full  relative">
           <div
             className="bg-cover bg-no-repeat xl:!max-w-[55vw] !w-full !h-[350px] !py-7 !p-4 !rounded-[20px] relative"
@@ -76,7 +75,9 @@ const MarketPlace = () => {
                 creating your own!
               </p>
               <div className="!flex lg:!gap-12 !gap-5 !py-10">
-                <PrimaryButton title="Discover now" />
+                <SecondaryButton varient="default" className="!bg-[--signin-bg] !rounded-[16px] !text-black hover:!text-[--logo-color] hover:!bg-[--bg-search] !text-center !Poppins500 !text-sm">
+                Discover now
+                </SecondaryButton>
                 <p className="!text-[--text-color] !text-center !py-2 !cursor-pointer">
                   Watch video
                 </p>
@@ -117,12 +118,7 @@ const MarketPlace = () => {
           <div className="!grid xl:!grid-cols-3 md:!grid-cols-2 !grid-cols-1 !gap-5">
             {trendingNFTData.map((data) => (
               <MarketPlaceCard
-                key={data.id}
-                title={data.title}
-                name={data.name}
-                eid={data.eid}
-                src={data.src}
-                alt={data.alt}
+              marketData={data}
               />
             ))}
           </div>
@@ -133,12 +129,7 @@ const MarketPlace = () => {
             <div className="!grid xl:!grid-cols-3 md:!grid-cols-2 !grid-cols-1  !gap-5">
               {RecentlyAddedData.map((data) => (
                 <MarketPlaceCard
-                  key={data.id}
-                  title={data.title}
-                  name={data.name}
-                  eid={data.eid}
-                  src={data.src}
-                  alt={data.alt}
+                 marketData={data}
                 />
               ))}
             </div>
@@ -150,16 +141,15 @@ const MarketPlace = () => {
               Top Creators
             </h3>
             <SecondaryButton
-              title="See all"
               size="sm"
               className=" !text-[--divider-color] !bg-[--bg-search] !rounded-full !py-4 !px-4"
-            />
+            >See all</SecondaryButton>
           </div>
           <TableData columns={Columns} data={topCreatorsData} loading={false} />
           <MarketPlaceHistory />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

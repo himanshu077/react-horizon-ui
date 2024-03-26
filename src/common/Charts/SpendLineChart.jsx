@@ -11,7 +11,7 @@ const data = [
 ];
 
 const SpendLineChart = () => (
-  <ResponsiveContainer width="70%" height={200}>
+  <ResponsiveContainer width="90%" height={200}>
     <LineChart
       data={data}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}

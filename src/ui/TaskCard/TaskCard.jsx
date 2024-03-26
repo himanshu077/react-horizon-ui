@@ -20,6 +20,7 @@ const TaskCard = () => {
                     <CheckboxButton
                         label="Tasks"
                         labelClass="!font-bold !text-lg !leading-[30px] !text-[--logo-color]"
+                        isChecked={true}
                     />
                     <img
                         src={More}
@@ -29,7 +30,7 @@ const TaskCard = () => {
                 </div>
                 {TaskData.map((data) => (
                     <div key={data.id} className="!flex !justify-between" >
-                        <CheckboxButton label={data.label} labelClass={`${data.isChecked === true ? "text-[--logo-color]" : "!text-[--tab-color]"} Poppins500 !text-base !leading-[28px] !py-2`} />
+                        <CheckboxButton label={data.label} isChecked={data.isChecked} labelClass={`${data.isChecked === true ? "text-[--logo-color]" : "!text-[--tab-color]"} Poppins500 !text-base !leading-[28px] !py-2`} />
                         <img src={SixDots} alt="dots" className="!mx-4"/>
                     </div>
                 ))}

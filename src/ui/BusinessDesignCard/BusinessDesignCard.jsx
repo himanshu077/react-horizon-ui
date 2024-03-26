@@ -50,8 +50,8 @@ const BusinessDesignCard = () => {
                     </div>
                 </div>
                 <div className="!flex !justify-between">
-                <AvatarGroup avatars={avatars} maxNumber={2}/>
-                    <SecondaryButton title="Get Started" className="!rounded-[16px] !bg-[--divider-color] !text-white !text-center !text-sm Poppins700"/>
+                    <AvatarGroup avatars={avatars} maxNumber={2} />
+                    <SecondaryButton className="!rounded-[16px] !bg-[--divider-color] !text-white !text-center !text-sm Poppins700">Get Started</SecondaryButton>
                 </div>
             </CardContent>
         </Card>

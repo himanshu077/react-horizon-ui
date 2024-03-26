@@ -16,7 +16,7 @@ const KanbanCards = ({ title, description, buttonClass, buttonTitle ,imgSrc,imgA
             <p className="!px-1 !py-3 Poppins400 !text-base !text-[--tab-color]">{description}</p>
             <div className="!flex !justify-between ">
                 <img />
-                <SecondaryButton size="sm" className={`${buttonClass}`} title={buttonTitle} />
+                <SecondaryButton size="sm" className={`${buttonClass}`} >{buttonTitle}</SecondaryButton>
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ export const checkData = [
       date: "21.Feb.2021",
       progress: "10.8",
       quantity: "1.485",
-      isChecked: "true",
+      isChecked: true,
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export const checkData = [
       date: "13.Mar.2021",
       progress: "21.3",
       quantity: "1.024",
-      isChecked: "true",
+      isChecked: true,
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export const checkData = [
       date: "24.Jan.2021",
       progress: "31.5",
       quantity: "858",
-      isChecked: "true",
+      isChecked: true,
     },
     {
       id: 4,

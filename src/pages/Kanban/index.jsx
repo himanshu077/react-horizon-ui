@@ -7,7 +7,7 @@ import Header from "@/common/Header/Header";
 const Kanban = () => {
   return (
     <div>
-      <Header title="Kanban" />
+      <Header title="Kanban" showEthInfo={false}/>
       <div className="!grid lg:!grid-cols-3 md:!grid-cols-2 !grid-cols-1 !gap-8 !px-6">
         <div className="lg:col-span-1 ">
           <div className="!bg-[--signin-bg] !rounded-[20px] !p-3">

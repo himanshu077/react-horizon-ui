@@ -10,7 +10,7 @@ const SecurityCard = () => {
                 <img src={FingerPrint} alt="print" />
                 <h4 className="Poppins700 !text-2xl !text-[--logo-color] !pt-4">Control card security in-app with a tap</h4>
                 <p className="Poppins500 !text-sm !leading-6 !text-[--tab-color]">Discover our cards benefits, with one tap.</p>
-                <SecondaryButton title="Cards" className="!rounded-[16px] !bg-[--divider-color] !w-full !text-white !mt-4 !text-center !text-sm Poppins700"/>
+                <SecondaryButton className="!rounded-[16px] !bg-[--divider-color] !w-full !text-white !mt-4 !text-center !text-sm Poppins700">Cards</SecondaryButton>
             </CardContent>
         </Card>
     );

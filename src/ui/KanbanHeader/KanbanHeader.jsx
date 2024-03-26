@@ -10,8 +10,7 @@ const KanbanHeader = ({title}) => {
           <SecondaryButton
             size="sm"
             className="!bg-[--text-color] !py-[16px] !px-10 !rounded-[12px] !text-lg !text-[--logo-color]"
-            title="+"
-          />
+          >+</SecondaryButton>
         </div>
   );
 };

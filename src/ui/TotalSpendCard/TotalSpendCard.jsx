@@ -13,12 +13,9 @@ const TotalSpendCard = () => {
                 <CardContent className="!p-0">
                     <div className="!flex !justify-between">
                         <SecondaryButton
-                            title="This month"
                             size="sm"
-                            className="!py-[18px] !px-[13px] !bg-[--bg-search] !text-[--tab-color] !rounded-[7px]"
-                            src={Calender}
-                            alt="calender"
-                        />
+                            className="!py-[18px] !px-[13px] !bg-[--bg-search] !gap-2 !text-[--tab-color] !rounded-[7px]"
+                        ><img  src={Calender} alt="calender"/><span>This month</span></SecondaryButton>
                         <img
                             src={Earning}
                             alt="more"

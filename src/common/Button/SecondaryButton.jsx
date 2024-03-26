@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
-const SecondaryButton = ({ className, title, size, src, alt }) => {
+const SecondaryButton = ({ className, children, size, ...props }) => {
     return <div>
-        <Button size={size} className={`${className} hover:!text-[--logo-color] hover:!bg-[--bg-search]`}>
-            <img src={src} alt={alt} className="!mr-2"/>
-            <p>{title}</p>
+        <Button size={size} className={`${className} hover:!text-[--logo-color] hover:!bg-[--bg-search]`} {...props}>
+            {children}
         </Button>
     </div>;
 };

@@ -99,7 +99,7 @@ export const checkData = [
     title2: "21.Feb.2021",
     title1: "10.8",
     title3: "1.485",
-    isChecked: "true",
+    isChecked: true,
   },
   {
     id: 2,
@@ -107,7 +107,7 @@ export const checkData = [
     title2: "13.Mar.2021",
     title1: "21.3",
     title3: "1.024",
-    isChecked: "true",
+    isChecked: true,
   },
   {
     id: 3,
@@ -115,7 +115,7 @@ export const checkData = [
     title2: "24.Jan.2021",
     title1: "31.5",
     title3: "858",
-    isChecked: "true",
+    isChecked: true,
   },
   {
     id: 4,

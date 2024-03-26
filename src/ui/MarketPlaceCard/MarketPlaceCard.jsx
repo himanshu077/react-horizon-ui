@@ -12,7 +12,9 @@ import Avatar from "@/assets/svg/Avatar1.svg"
 import Avatar4 from "@/assets/svg/Avatar4.svg"
 import AvatarGroup from "../AvatarGroup/AvatarGroup";
 
-const MarketPlaceCard = ({ src, alt, title, name, eid }) => {
+const MarketPlaceCard = ({marketData}) => {
+
+    const { src, alt, title, name, eid }= marketData;
     const avatars = [
         { id: 0, src: Avatar, alt: "avatar" },
         { id: 1, src: Avatar2, alt: "avatar" },
@@ -39,7 +41,7 @@ const MarketPlaceCard = ({ src, alt, title, name, eid }) => {
                         <CardTitle className="!text-[--divider-color] Poppins700 text-sm !py-2">Current Bid:{eid}</CardTitle>
                     </div>
                     <div>
-                        <SecondaryButton title="Place Bid" size="sm" className="bg-[--eid-button-color] !text-white !rounded-full !py-[17px]" />
+                        <SecondaryButton size="sm" className="bg-[--eid-button-color] !text-white !rounded-full !py-[17px]" >Place Bid</SecondaryButton>
                     </div>
                 </div>
             </CardContent>

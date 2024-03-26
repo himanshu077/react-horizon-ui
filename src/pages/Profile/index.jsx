@@ -14,7 +14,7 @@ import Header from "@/common/Header/Header";
 const Profile = () => {
   return (
     <div>
-      <Header title="Profile" />
+      <Header title="Profile" showEthInfo={false}/>
       <div className="!flex xl:!flex-row !flex-col !gap-4 !px-5">
         <ProfileCard />
         <Card className="p-5 xl:!w-[20vw] !w-full bg-[--signin-bg] !border-none !shadow-none !rounded-[20px]">
@@ -48,9 +48,9 @@ const Profile = () => {
             <Progress value="53" className="h-2 !mt-3 !w-full" />
           </CardContent>
         </Card>
-        <Card className="!p-6 xl:!w-[31.4vw] !w-full bg-[--signin-bg] !rounded-[20px] !border-none !shadow-none">
-          <CardContent className="p-0 !flex !flex-row !gap-4">
-            <div className="!border-dashed !border-2 border-[--border-color] !p-4 !h-[311px] !max-w-[268px] !bg-[--bg-download] !rounded-[13px] flex flex-col !items-center !justify-center">
+        <Card className="!p-5 xl:!w-[31.4vw] !w-full !rounded-[20px] !bg-[--signin-bg] !border-none !shadow-none">
+          <CardContent className="p-0 !flex lg:!flex-row md:!flex-row !flex-col !gap-4">
+            <div className="!border-dashed !border-2 !border-[--border-color] !p-4 !h-[311px] !w-full xl:w-[268px] md:!max-w-[268px] !rounded-[13px] flex flex-col !items-center !justify-center">
               <img src={DownloadSvg} alt="download" />
               <h4 className="text-[--divider-color] text-xl text-center Poppins700 py-2">
                 Upload Files
@@ -88,11 +88,7 @@ const Profile = () => {
             </p>
             {AllProjectData.map((item) => (
               <AllProjectCard
-                key={item.id}
-                title={item.title}
-                project={item.project}
-                src={item.src}
-                alt={item.alt}
+               projectData={item}
               />
             ))}
           </CardContent>
@@ -113,7 +109,7 @@ const Profile = () => {
               get our heart broken by people we love, even that we give
               them all...
             </p>
-            <div className="!grid !grid-cols-2 !gap-4">
+            <div className="!grid lg:!grid-cols-2 md:!grid-cols-2 !grid-cols-1 !gap-4">
               {GeneralInfoData.map((data) => (
                 <GeneralInformationCard
                   key={data.id}

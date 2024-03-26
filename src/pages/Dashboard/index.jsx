@@ -1,7 +1,7 @@
 import Earning from "@/assets/svg/Earning.svg";
 import Dollar from "@/assets/svg/Dollar.svg";
 import AmericaFlag from "@/assets/svg/AmericaFlag.svg";
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { IoChevronDown } from "react-icons/io5";
 import NewTask from "@/assets/svg/NewTask.svg";
@@ -24,7 +24,12 @@ import StarbugsCard from "@/ui/StarbugsCard/StarbugsCard";
 import { Calendar } from "@/components/ui/calendar";
 
 const Dashboard = () => {
-  const [date, setDate] = React.useState(new Date())
+  const [selectedDates, setSelectedDates] = useState([]);
+
+  const handleDateSelect = (dates) => {
+    setSelectedDates(dates);
+  };
+  
   const checkColumns = [
     {
       header: "NAME",
@@ -35,6 +40,7 @@ const Dashboard = () => {
             <CheckboxButton
               label={props.cell.row.original.name}
               labelClass="font-bold !text-sm !text-[--logo-color]"
+              isChecked={props.cell.row.original.isChecked}
             />
           </div>
         );
@@ -138,7 +144,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Header title="Main Dashboard" />
+      <Header title="Main Dashboard" showEthInfo={false}/>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 px-5">
         <Card className="!p-3 !rounded-[16px] xl:!w-[13vw] bg-[--signin-bg] !w-full !border-none !shadow-none">
           <CardContent className="!p-0 !flex !py-2 !gap-4">
@@ -264,12 +270,19 @@ const Dashboard = () => {
         <TaskCard />
         <Calendar
           className="!bg-[--signin-bg] !rounded-[20px] xl:!w-[19.5vw] !w-full !flex !justify-center"
-          mode="single"
-          selected={date}
-          onSelect={setDate}
+          classNames={{
+            day_selected: "!bg-[--divider-color] !text-white !rounded-full ",
+            day_today:
+              "!rounded-full !bg-none !text-[--divider-color] !text-base !font-bold",
+            cell: "[&:has([aria-selected])]:bg-[--sign-in]",
+            row: "flex w-full mt-0",
+          }}
+          mode="multiple"
+          selected={selectedDates}
+          onSelect={handleDateSelect}
         />
       </div>
-      <div className="!mx-5 !flex xl:!flex-row !flex-col !gap-5">
+      <div className="!mx-5 !grid xl:!grid-cols-4 lg:!grid-cols-3 md:!grid-cols-2 !grid-cols-1 !gap-5">
         <BusinessDesignCard />
         <TeamMemberCard />
         <SecurityCard />

@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 908);
+      setIsSmallScreen(window.innerWidth <= 1023);
     };
 
     handleResize();
@@ -30,10 +30,10 @@ function App() {
   const isSignInPage = location.pathname === '/signin';
 
   return (
-    <div className="flex min-h-screen !w-full ">
-      {isSignInPage ? null : (isSmallScreen ? null : <Sidebar />)}
-      {isSignInPage ? null : (isSmallScreen ? <HeaderSidebar /> : null)}
-      <main className='flex-1'>
+    <div className="!flex lg:!flex-row !flex-col !min-h-screen box-border">
+      {!isSignInPage && !isSmallScreen && <Sidebar />}
+      {!isSignInPage && isSmallScreen && <HeaderSidebar />}
+      <main className='lg:!flex-1'>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/kanban" element={<Kanban />} />
@@ -42,7 +42,7 @@ function App() {
           <Route path="/tables" element={<Tables />} />
           <Route path="/signin" element={<SignIn />} />
         </Routes>
-        {isSignInPage ? null :  <Footer />}
+        {!isSignInPage && <Footer />}
       </main>
     </div>
   );

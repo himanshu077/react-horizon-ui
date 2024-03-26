@@ -11,10 +11,9 @@ const MarketPlaceHistory = () => {
                     History
                 </h3>
                 <SecondaryButton
-                    title="See all"
                     size="sm"
                     className=" !text-[--divider-color] !bg-[--bg-search] !rounded-full !py-4 !px-4"
-                />
+                >See all</SecondaryButton>
             </div>
             <div>
                 {historyData.map((data) => (
