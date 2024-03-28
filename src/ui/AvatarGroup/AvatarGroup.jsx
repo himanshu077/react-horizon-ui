@@ -5,7 +5,7 @@ const AvatarGroup = ({ avatars, maxNumber }) => {
   const overflowCount = avatars.length - maxNumber;
 
   return (
-    <div className="flex items-center">
+    <div className=" !flex -space-x-4 items-center">
       {avatarList.map((avatar) => (
         <div
           key={avatar.id}
@@ -14,7 +14,7 @@ const AvatarGroup = ({ avatars, maxNumber }) => {
           <img
             src={avatar.src}
             alt={avatar.alt}
-            className=" object-cover"
+            className=" object-cover inline-block"
           />
         </div>
       ))}
