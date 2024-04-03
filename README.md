@@ -22,7 +22,7 @@ The live version of this project is deployed and accessible [here](https://react
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/react-horizon-ui.git
+git clone https://github.com/himanshu077/react-horizon-ui.git
 ```
 
 2. Navigate into the project directory:
